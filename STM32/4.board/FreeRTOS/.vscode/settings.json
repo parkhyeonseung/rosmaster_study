@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "freertos.h": "c",
+        "cmsis_os.h": "c"
+    }
+}

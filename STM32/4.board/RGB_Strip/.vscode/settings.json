@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "gpio.h": "c",
+        "spi.h": "c",
+        "stm32f103xe.h": "c",
+        "bsp_key.h": "c"
+    }
+}

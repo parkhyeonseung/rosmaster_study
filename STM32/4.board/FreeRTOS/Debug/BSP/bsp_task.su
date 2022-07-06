@@ -1,0 +1,3 @@
+bsp_task.c:12:6:Task_Entity_LED	8	static
+bsp_task.c:23:6:Task_Entity_Beep	8	static
+bsp_task.c:44:6:Task_Entity_Key	8	static

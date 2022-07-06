@@ -1,0 +1,5 @@
+freertos.c:72:6:vApplicationGetIdleTaskMemory	24	static
+freertos.c:86:6:MX_FREERTOS_Init	104	static
+freertos.c:133:6:StartDefaultTask	16	static
+freertos.c:152:6:StartTask_BEEP	16	static
+freertos.c:171:6:StartTask_KEY	16	static

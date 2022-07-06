@@ -1,0 +1,3 @@
+../BSP/bsp.c:6:6:Bsp_Led_Show_State_Handle	8	static
+../BSP/bsp.c:19:6:Bsp_Init	16	static
+../BSP/bsp.c:35:6:Bsp_Loop	8	static

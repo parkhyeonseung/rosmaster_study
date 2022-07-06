@@ -1,0 +1,8 @@
+../BSP/bsp_uart_servo.c:14:6:UartServo_Ctrl	40	static
+../BSP/bsp_uart_servo.c:43:6:UartServo_Set_Snyc_Buffer	24	static
+../BSP/bsp_uart_servo.c:66:6:UartServo_Sync_Write	96	static
+../BSP/bsp_uart_servo.c:107:6:UartServo_Set_Torque	32	static
+../BSP/bsp_uart_servo.c:128:6:UartServo_Set_ID	32	static
+../BSP/bsp_uart_servo.c:151:6:UartServo_Get_Angle	32	static
+../BSP/bsp_uart_servo.c:167:6:UartServo_Revice	16	static
+../BSP/bsp_uart_servo.c:209:9:UartServo_Rx_Parse	16	static

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "bsp.h": "c",
+        "dma.h": "c"
+    }
+}

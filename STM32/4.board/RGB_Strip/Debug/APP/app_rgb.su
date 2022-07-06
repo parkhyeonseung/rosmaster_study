@@ -1,0 +1,13 @@
+app_rgb.c:47:6:app_rgb_init	16	static
+app_rgb.c:59:16:rgb_remix	16	static
+app_rgb.c:72:13:rgb_remix_u8	32	static
+app_rgb.c:85:13:app_rgb_waterfall	16	static
+app_rgb.c:148:13:app_rbg_gradient	8	static
+app_rgb.c:193:13:app_rgb_breathing	16	static
+app_rgb.c:271:13:app_rgb_marquee	16	static
+app_rgb.c:288:13:app_rgb_starbright	32	static
+app_rgb.c:319:6:app_rgb_effects_handle	8	static
+app_rgb.c:376:6:app_rgb_set_breathing_color	16	static
+app_rgb.c:385:6:app_rgb_set_effect	16	static
+app_rgb.c:395:14:app_rgb_get_effect	4	static
+app_rgb.c:401:9:app_rgb_get_speed	4	static

@@ -1,0 +1,5 @@
+../BSP/bsp_uart.c:16:6:USART1_Init	8	static
+../BSP/bsp_uart.c:22:6:USART1_Send_U8	16	static
+../BSP/bsp_uart.c:28:6:USART1_Send_ArrayU8	16	static
+../BSP/bsp_uart.c:42:6:HAL_UART_RxCpltCallback	16	static
+../BSP/bsp_uart.c:64:1:__io_putchar	16	static

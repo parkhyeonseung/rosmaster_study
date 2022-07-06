@@ -1,0 +1,2 @@
+bsp.c:6:6:Bsp_Init	8	static
+bsp.c:17:6:Bsp_MainLoop	8	static

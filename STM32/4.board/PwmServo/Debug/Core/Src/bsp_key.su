@@ -1,0 +1,3 @@
+bsp_key.c:7:16:Key1_is_Press	8	static
+bsp_key.c:19:9:Key1_Long_Press	16	static
+bsp_key.c:38:9:Key1_State	16	static

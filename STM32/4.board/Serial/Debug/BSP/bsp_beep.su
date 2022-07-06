@@ -1,0 +1,6 @@
+../BSP/bsp_beep.c:9:13:Beep_Set_Time	16	static
+../BSP/bsp_beep.c:16:17:Beep_Get_Time	4	static
+../BSP/bsp_beep.c:23:13:Beep_Set_State	16	static
+../BSP/bsp_beep.c:30:16:Beep_Get_State	4	static
+../BSP/bsp_beep.c:37:6:Beep_On_Time	16	static
+../BSP/bsp_beep.c:64:6:Beep_Timeout_Close_Handle	8	static

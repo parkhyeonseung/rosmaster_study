@@ -1,0 +1,5 @@
+../BSP/bsp_encoder.c:16:16:Encoder_Read_CNT	24	static
+../BSP/bsp_encoder.c:33:5:Encoder_Get_Count_Now	16	static
+../BSP/bsp_encoder.c:44:6:Encoder_Get_ALL	16	static
+../BSP/bsp_encoder.c:54:6:Encoder_Update_Count	8	static
+../BSP/bsp_encoder.c:70:6:Encoder_Init	8	static

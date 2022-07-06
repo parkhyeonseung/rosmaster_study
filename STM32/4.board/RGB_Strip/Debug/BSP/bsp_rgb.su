@@ -1,0 +1,7 @@
+../BSP/bsp_rgb.c:27:13:WS2812_Send_Data	16	static
+../BSP/bsp_rgb.c:34:13:WS2812_Set_Color_One	32	static
+../BSP/bsp_rgb.c:57:6:RGB_Init	8	static
+../BSP/bsp_rgb.c:65:6:RGB_Update	8	static
+../BSP/bsp_rgb.c:72:6:RGB_Set_Color	32	static
+../BSP/bsp_rgb.c:80:6:RGB_Set_Color_U32	24	static
+../BSP/bsp_rgb.c:97:6:RGB_Clear	16	static

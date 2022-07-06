@@ -1,0 +1,2 @@
+../BSP/bsp_key.c:7:16:Key1_is_Press	8	static
+../BSP/bsp_key.c:21:9:Key1_State	16	static

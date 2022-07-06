@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bsp.h": "c",
+			"bsp_encoder.h": "c",
+			"stm32f1xx_hal.h": "c",
+			"bsp_key.h": "c"
+		}
+	}
+}
