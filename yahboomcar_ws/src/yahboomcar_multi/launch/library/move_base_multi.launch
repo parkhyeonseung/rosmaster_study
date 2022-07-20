@@ -1,0 +1,45 @@
+<launch>
+    <arg name="ns" default="robot1"/>
+    <arg name="move_forward_only" default="false"/>
+    <arg name="odom_model_type" default="omni"/>
+    <arg name="robot_type" value="$(env ROBOT_TYPE)" doc="robot_type [X1,X3,X3plus,R2,X7]"/>
+    <group ns="$(arg ns)">
+        <node name='send_mark' pkg="yahboomcar_nav" type="send_mark.py"/>
+        <!-- AMCL -->
+        <node pkg="amcl" type="amcl" name="amcl">
+            <!-- Load default parameters for turtlebot -->
+            <rosparam file="$(find yahboomcar_multi)/launch/library/amcl_params.yaml" command="load"/>
+            <param name="odom_frame_id" value="/$(arg ns)/odom"/>
+            <param name="base_frame_id" value="/$(arg ns)/base_footprint"/>
+            <param name="odom_model_type" value="$(arg odom_model_type)"/>
+            <!-- Use the single map server -->
+            <remap from="static_map" to="/static_map"/>
+        </node>
+        <!-- move_base -->
+        <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+            <rosparam file="$(find yahboomcar_nav)/param/common/move_base_params.yaml" command="load"/>
+            <rosparam file="$(find yahboomcar_nav)/param/common/global_costmap_params.yaml" command="load"/>
+            <rosparam file="$(find yahboomcar_nav)/param/common/local_costmap_params.yaml" command="load"/>
+            <rosparam file="$(find yahboomcar_nav)/param/common/costmap_common_params_$(arg robot_type).yaml" command="load"
+                ns="global_costmap"/>
+            <rosparam file="$(find yahboomcar_nav)/param/common/costmap_common_params_$(arg robot_type).yaml" command="load"
+                ns="local_costmap"/>
+            <rosparam file="$(find yahboomcar_nav)/param/common/dwa_local_planner_params_$(arg robot_type).yaml" command="load"/>
+            <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" if="$(eval arg('robot_type') == 'X3')"/>
+
+            <!-- Set tf_prefix for frames explicity, overwriting defaults -->
+            <param name="global_costmap/scan/sensor_frame" value="$(arg ns)/laser"/>
+            <param name="global_costmap/obstacle_layer/scan/sensor_frame" value="$(arg ns)/laser"/>
+            <param name="global_costmap/global_frame" value="map"/>
+            <param name="global_costmap/robot_base_frame" value="$(arg ns)/base_footprint"/>
+            <param name="local_costmap/scan/sensor_frame" value="$(arg ns)/laser"/>
+            <param name="local_costmap/obstacle_layer/scan/sensor_frame" value="$(arg ns)/laser"/>
+            <param name="local_costmap/global_frame" value="$(arg ns)/odom"/>
+            <param name="local_costmap/robot_base_frame" value="$(arg ns)/base_footprint"/>
+
+            <!-- Centralized map server -->
+            <remap from="map" to="/map"/>
+            <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)"/>
+        </node>
+    </group>
+</launch>

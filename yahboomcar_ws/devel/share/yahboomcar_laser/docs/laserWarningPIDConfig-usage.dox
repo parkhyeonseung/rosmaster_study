@@ -1,0 +1,12 @@
+\subsubsection usage Usage
+\verbatim
+<node name="laser_Warning" pkg="yahboomcar_laser" type="laser_Warning">
+  <param name="ang_Kp" type="double" value="3.0" />
+  <param name="ang_Ki" type="double" value="0.0" />
+  <param name="ang_Kd" type="double" value="5.0" />
+  <param name="laserAngle" type="int" value="70" />
+  <param name="ResponseDist" type="double" value="0.5" />
+  <param name="switch" type="bool" value="False" />
+</node>
+\endverbatim
+

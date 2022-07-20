@@ -1,0 +1,23 @@
+<launch>
+    <!-- 设置当前机器人命名空间 -->
+    <arg name="ns" default="robot1"/>
+    <arg name="robot_type" value="$(env ROBOT_TYPE)" doc="robot_type [X1,X3,X3plus,R2,X7]"/>
+    <group ns="$(arg ns)">
+        <!-- 驱动模块 || driver module -->
+        <include file="$(find rplidar_ros)/launch/rplidar.launch">
+            <arg name="frame_id" default="$(arg ns)/laser"/>
+        </include>
+        <include file="$(find yahboomcar_multi)/launch/library/usb_cam.launch">
+            <arg name="frame_id" default="$(arg ns)/usb_cam"/>
+        </include>
+        <!-- 相机的坐标系 || Camera's coordinate system-->
+        <node pkg="tf" type="static_transform_publisher" name="base_link_to_camera"
+              args="0.0484 0 0.10403 0 0 0  $(arg ns)/base_link $(arg ns)/usb_cam 30" if="$(eval arg('robot_type') == 'X3')"/>
+        <!-- 激光雷达的坐标系 || Lidar coordinate system -->
+        <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+              args="0.0435 5.258E-05 0.11 3.1416 0 0 $(arg ns)/base_link $(arg ns)/laser 30" if="$(eval arg('robot_type') == 'X3')"/>
+    </group>
+    <include file="$(find yahboomcar_multi)/launch/library/bringup_multi.launch">
+        <arg name="ns" default="$(arg ns)"/>
+    </include>
+</launch>

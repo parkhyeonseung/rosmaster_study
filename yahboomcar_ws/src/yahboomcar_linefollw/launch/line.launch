@@ -1,0 +1,8 @@
+<launch>
+    <arg name="img_flip" default="false"/>
+    <node name="LineDetect" pkg="yahboomcar_linefollw" type="follow_line.py" output="screen" required="true">
+        <param name="img_flip" type="bool" value="$(arg img_flip)"/>
+        <param name="VideoSwitch" type="bool" value="false"/>
+        <remap from="/usb_cam/image_raw/compressed" to="/usb_cam/image_raw/compressed"/>
+    </node>
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <arg name="VideoSwitch" default="false"/>
+    <arg name="img_flip" default="false"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/yahboomcar.launch"/>
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" unless="$(arg VideoSwitch)"/>
+    <node name="LineDetect" pkg="yahboomcar_linefollw" type="follow_line.py" output="screen" required="true" if="$(arg VideoSwitch)">
+        <param name="img_flip" type="bool" value="$(arg img_flip)"/>
+        <param name="VideoSwitch" type="bool" value="$(arg VideoSwitch)"/>
+        <remap from="/usb_cam/image_raw/compressed" to="/usb_cam/image_raw/compressed"/>
+    </node>
+</launch>

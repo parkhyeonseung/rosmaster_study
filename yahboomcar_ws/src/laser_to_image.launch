@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+    <node name="laser_to_image" pkg="yahboomcar_visual" type="laser_to_image.py" output="screen"/>
+</launch>

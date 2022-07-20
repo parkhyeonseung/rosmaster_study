@@ -1,0 +1,19 @@
+\subsubsection usage Usage
+\verbatim
+<node name="LineDetect" pkg="yahboomcar_linefollw" type="LineDetect">
+  <param name="Hmin" type="int" value="0" />
+  <param name="Smin" type="int" value="85" />
+  <param name="Vmin" type="int" value="126" />
+  <param name="Hmax" type="int" value="9" />
+  <param name="Smax" type="int" value="253" />
+  <param name="Vmax" type="int" value="255" />
+  <param name="scale" type="int" value="1000" />
+  <param name="Kp" type="int" value="60" />
+  <param name="Ki" type="int" value="0" />
+  <param name="Kd" type="int" value="20" />
+  <param name="linear" type="double" value="0.4" />
+  <param name="LaserAngle" type="int" value="30" />
+  <param name="ResponseDist" type="double" value="0.55" />
+</node>
+\endverbatim
+

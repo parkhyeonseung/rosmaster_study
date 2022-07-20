@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="laser_Avoidance" pkg="yahboomcar_laser" type="laser_Avoidance">
+  <param name="linear" type="double" value="0.5" />
+  <param name="angular" type="double" value="1.0" />
+  <param name="LaserAngle" type="int" value="40" />
+  <param name="ResponseDist" type="double" value="0.55" />
+  <param name="switch" type="bool" value="False" />
+</node>
+\endverbatim
+

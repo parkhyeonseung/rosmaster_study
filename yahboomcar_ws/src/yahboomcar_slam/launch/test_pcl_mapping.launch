@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="use_viewer" default="true"/>
+    <arg name="local_frame_id" default="camera_link"/>
+    <arg name="global_frame_id" default="camera_link"/>
+    <node name="pointcloud_mapping" pkg="yahboomcar_slam" type="pointcloud_mapping" output="screen">
+        <param name="topicColor" type="string" value="/ORB_SLAM2/RGB/Image"/>
+        <param name="topicDepth" type="string" value="/ORB_SLAM2/Depth/Image"/>
+        <param name="topicTcw" type="string" value="/ORB_SLAM2/CameraPose"/>
+        <param name="local_frame_id" type="string" value="$(arg local_frame_id)"/>
+        <param name="global_frame_id" type="string" value="$(arg global_frame_id)"/>
+        <param name="node_path" type="string" value="$(find yahboomcar_slam)"/>
+        <param name="fx" type="double" value="615.50506"/>
+        <param name="fy" type="double" value="623.69024"/>
+        <param name="cx" type="double" value="365.84388"/>
+        <param name="cy" type="double" value="238.778  "/>
+        <param name="resolution" type="double" value="0.01"/>
+        <param name="depthfactor" type="double" value="1.0"/>
+        <param name="queueSize" type="int" value="10"/>
+        <param name="buseExact" type="bool" value="0"/>
+        <param name="use_viewer" type="bool" value="$(arg use_viewer)"/>
+    </node>
+</launch>

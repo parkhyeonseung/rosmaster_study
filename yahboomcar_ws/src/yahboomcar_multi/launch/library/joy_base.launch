@@ -1,0 +1,16 @@
+<launch>
+    <arg name="ns" default="robot1"/>
+    <arg name="joy" default="joy"/>
+    <group ns="$(arg ns)">
+        <node name="yahboom_joy" pkg="yahboomcar_ctrl" type="yahboom_joy.py" output="screen">
+            <param name="linear_speed_limit" type="double" value="1.0"/>
+            <param name="angular_speed_limit" type="double" value="5.0"/>
+            <remap from="move_base/cancel" to="/$(arg ns)/move_base/cancel"/>
+            <remap from="cmd_vel" to="/$(arg ns)/cmd_vel"/>
+            <remap from="Buzzer" to="/$(arg ns)/Buzzer"/>
+            <remap from="JoyState" to="/$(arg ns)/JoyState"/>
+            <remap from="RGBLight" to="/$(arg ns)/RGBLight"/>
+            <remap from="joy" to="/$(arg joy)"/>
+        </node>
+    </group>
+</launch>

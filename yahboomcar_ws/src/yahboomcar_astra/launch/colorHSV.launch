@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="yahboomcar_astra" type="colorHSV.py" name="colorHSV" required="true" output="screen">
+        <param name="VideoSwitch" type="bool" value="False"/>
+    </node>
+</launch>
