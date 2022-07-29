@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>yahboomcar_laser</name>
+    <name>yahboomcar_laser_hlds</name>
     <version>0.0.0</version>
     <description>The yahboomcar_laser package</description>
 
