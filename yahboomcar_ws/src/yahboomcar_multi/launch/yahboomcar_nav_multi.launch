@@ -1,0 +1,36 @@
+<launch>
+    <arg name="first_robot1" default="robot1"/>
+    <arg name="second_robot2" default="robot2"/>
+    <arg name="third_robot3" default="robot3"/>
+    <!-- 是否打开rviz || Whether to open rviz -->
+    <arg name="use_rviz" default="true"/>
+    <!-- 地图名 || Map name -->
+    <arg name="map" default="my_map"/>
+    <!-- 加载地图 || Load map -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find yahboomcar_multi)/maps/$(arg map).yaml"/>
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find yahboomcar_multi)/rviz/navigation_multi.rviz" if="$(arg use_rviz)"/>
+    <!-- 多机手柄控制 || Multi machine handle control-->
+    <include file="$(find yahboomcar_multi)/launch/joy_multi.launch"/>
+    <!-- 手机app节点 || Mobile app node-->
+    <include file="$(find yahboomcar_nav)/launch/library/app.launch"/>
+
+    <!-- ############################# first_robot1 ############################# -->
+
+    <include file="$(find yahboomcar_multi)/launch/library/move_base_multi.launch">
+        <arg name="ns" value="$(arg first_robot1)"/>
+    </include>
+
+    <!-- ############################# second_robot2 ############################# -->
+
+    <include file="$(find yahboomcar_multi)/launch/library/move_base_multi.launch">
+        <arg name="ns" value="$(arg second_robot2)"/>
+    </include>
+
+    <!-- ############################# third_robot3 ############################# -->
+
+    <include file="$(find yahboomcar_multi)/launch/library/move_base_multi.launch">
+        <arg name="ns" value="$(arg third_robot3)"/>
+    </include>
+
+</launch>

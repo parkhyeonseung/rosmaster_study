@@ -1,0 +1,11 @@
+<launch>
+    <!-- 手柄控制节点 -->
+    <!--Handle control node-->
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch"/>
+    <include file="$(find astra_camera)/launch/astra.launch"/>
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/yahboomcar.launch"/>
+    <!-- 距离相机的范围【0.4米，8米】，否则无效-->
+    <!--Range from the camera[0.4m,8m],Otherwise invalid-->
+    <node name="KCF_Tracker" pkg="yahboomcar_astra" type="KCFTracker_node" required="true" output="screen"/>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/yahboomcar_model.launch"/>
+</launch>

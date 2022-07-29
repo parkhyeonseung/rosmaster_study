@@ -1,0 +1,1177 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /TF1/Frames1
+        - /TF1/Tree1
+        - /robot2_Global Map1/Planner1
+      Splitter Ratio: 0.6344647407531738
+    Tree Height: 741
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: robot1_LaserScan
+  - Class: rviz/Tool Properties
+    Expanded: ~
+    Name: Tool Properties
+    Splitter Ratio: 0.5
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        map:
+          Value: true
+        robot1/back_left_wheel:
+          Value: true
+        robot1/back_right_wheel:
+          Value: true
+        robot1/base_footprint:
+          Value: true
+        robot1/base_link:
+          Value: true
+        robot1/camera_link:
+          Value: true
+        robot1/front_left_wheel:
+          Value: true
+        robot1/front_right_wheel:
+          Value: true
+        robot1/imu_link:
+          Value: true
+        robot1/laser:
+          Value: true
+        robot1/laser_link:
+          Value: true
+        robot1/odom:
+          Value: true
+        robot1/usb_cam:
+          Value: true
+        robot2/back_left_wheel:
+          Value: true
+        robot2/back_right_wheel:
+          Value: true
+        robot2/base_footprint:
+          Value: true
+        robot2/base_link:
+          Value: true
+        robot2/camera_link:
+          Value: true
+        robot2/front_left_wheel:
+          Value: true
+        robot2/front_right_wheel:
+          Value: true
+        robot2/imu_link:
+          Value: true
+        robot2/laser:
+          Value: true
+        robot2/laser_link:
+          Value: true
+        robot2/odom:
+          Value: true
+        robot2/usb_cam:
+          Value: true
+        robot3/back_left_wheel:
+          Value: true
+        robot3/back_right_wheel:
+          Value: true
+        robot3/base_footprint:
+          Value: true
+        robot3/base_link:
+          Value: true
+        robot3/camera_link:
+          Value: true
+        robot3/front_left_wheel:
+          Value: true
+        robot3/front_right_wheel:
+          Value: true
+        robot3/imu_link:
+          Value: true
+        robot3/laser:
+          Value: true
+        robot3/laser_link:
+          Value: true
+        robot3/odom:
+          Value: true
+        robot3/usb_cam:
+          Value: true
+      Marker Scale: 0.30000001192092896
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        map:
+          robot1/odom:
+            robot1/base_footprint:
+              robot1/base_link:
+                robot1/back_left_wheel:
+                  {}
+                robot1/back_right_wheel:
+                  {}
+                robot1/camera_link:
+                  {}
+                robot1/front_left_wheel:
+                  {}
+                robot1/front_right_wheel:
+                  {}
+                robot1/imu_link:
+                  {}
+                robot1/laser:
+                  {}
+                robot1/laser_link:
+                  {}
+                robot1/usb_cam:
+                  {}
+          robot2/odom:
+            robot2/base_footprint:
+              robot2/base_link:
+                robot2/back_left_wheel:
+                  {}
+                robot2/back_right_wheel:
+                  {}
+                robot2/camera_link:
+                  {}
+                robot2/front_left_wheel:
+                  {}
+                robot2/front_right_wheel:
+                  {}
+                robot2/imu_link:
+                  {}
+                robot2/laser:
+                  {}
+                robot2/laser_link:
+                  {}
+                robot2/usb_cam:
+                  {}
+          robot3/odom:
+            robot3/base_footprint:
+              robot3/base_link:
+                robot3/back_left_wheel:
+                  {}
+                robot3/back_right_wheel:
+                  {}
+                robot3/camera_link:
+                  {}
+                robot3/front_left_wheel:
+                  {}
+                robot3/front_right_wheel:
+                  {}
+                robot3/imu_link:
+                  {}
+                robot3/laser:
+                  {}
+                robot3/laser_link:
+                  {}
+                robot3/usb_cam:
+                  {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /map
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        robot1/back_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/back_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot1/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot1/laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: robot1_RobotModel
+      Robot Description: robot1/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: true
+          Enabled: true
+          Name: Costmap
+          Topic: /robot1/move_base/global_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 0; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot1/move_base/DWAPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: robot1_Global Map
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Costmap
+          Topic: /robot1/move_base/local_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 12; 255
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot1/move_base/DWAPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 0.800000011920929
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Cost Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot1/move_base/DWAPlannerROS/cost_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Trajectory Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot1/move_base/DWAPlannerROS/trajectory_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+      Enabled: true
+      Name: robot1_Local Map
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 0; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: robot1_LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Flat Squares
+      Topic: /robot1/scan
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Arrow Length: 0.05000000074505806
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 239; 41; 41
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: robot1_Amcl
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /robot1/particlecloud
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: robot1_Goal
+      Shaft Length: 0.5
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /robot1/move_base_simple/goal
+      Unreliable: false
+      Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: false
+      Enabled: false
+      Keep: 100
+      Name: robot1_Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /robot1/odom
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        robot2/back_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/back_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot2/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot2/laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: robot2_RobotModel
+      Robot Description: robot2/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: true
+          Enabled: true
+          Name: Costmap
+          Topic: /robot2/move_base/global_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 255; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot2/move_base/DWAPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: robot2_Global Map
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Costmap
+          Topic: /robot2/move_base/local_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 12; 255
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot2/move_base/DWAPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 0.800000011920929
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Cost Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot2/move_base/DWAPlannerROS/cost_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Trajectory Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot2/move_base/DWAPlannerROS/trajectory_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+      Enabled: true
+      Name: robot2_Local Map
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 0; 255; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: robot2_LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Flat Squares
+      Topic: /robot2/scan
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Arrow Length: 0.05000000074505806
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 0; 192; 0
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: robot2_Amcl
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /robot2/particlecloud
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 0; 255; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: robot2_Goal
+      Shaft Length: 0.5
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /robot2/move_base_simple/goal
+      Unreliable: false
+      Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: false
+      Enabled: false
+      Keep: 100
+      Name: robot2_Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /robot2/odom
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        robot3/back_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/back_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        robot3/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robot3/laser_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: robot3_RobotModel
+      Robot Description: robot3/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: true
+          Enabled: true
+          Name: Costmap
+          Topic: /robot3/move_base/global_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 0; 255
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot3/move_base/DWAPlannerROS/global_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: robot3_Global Map
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Costmap
+          Topic: /robot3/move_base/local_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 12; 255
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Planner
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /robot3/move_base/DWAPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+        - Alpha: 0.800000011920929
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Cost Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot3/move_base/DWAPlannerROS/cost_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: total_cost
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: Trajectory Cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /robot3/move_base/DWAPlannerROS/trajectory_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+      Enabled: true
+      Name: robot3_Local Map
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 0; 0; 255
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: robot3_LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Flat Squares
+      Topic: /robot3/scan
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Arrow Length: 0.05000000074505806
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 114; 159; 207
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: robot3_Amcl
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /robot3/particlecloud
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 52; 101; 164
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: robot3_Goal
+      Shaft Length: 0.5
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /robot3/move_base_simple/goal
+      Unreliable: false
+      Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: false
+      Enabled: false
+      Keep: 100
+      Name: robot3_Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /robot3/odom
+      Unreliable: false
+      Value: false
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /robot1/usb_cam/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Robot1_Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /robot2/usb_cam/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Robot2_Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /robot3/usb_cam/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Robot3_Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/MoveCamera
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/Select
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: robot1/initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: robot1/move_base_simple/goal
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: robot2//initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: robot2/move_base_simple/goal
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: robot3//initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: robot3/move_base_simple/goal
+    - Class: rviz/Measure
+  Value: true
+  Views:
+    Current:
+      Class: rviz/XYOrbit
+      Distance: 6.686718463897705
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -0.2326614260673523
+        Y: -1.0863122940063477
+        Z: -1.3113021850585938e-6
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.9347960948944092
+      Target Frame: <Fixed Frame>
+      Value: XYOrbit (rviz)
+      Yaw: 3.0354011058807373
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 960
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000322fc0200000008fb0000001200530065006c0065006300740069006f006e000000003d0000008f0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000322000000c900fffffffb0000000a0049006d0061006700650000000317000000cc0000000000000000fb0000000a0049006d0061006700650000000330000000ce0000000000000000fb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000002b7000000a80000000000000000000000010000010f00000322fc0200000006fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000000f2000000a400fffffffb000000180052006f0062006f00740031005f0049006d0061006700650100000135000000b20000001600fffffffb000000180052006f0062006f00740032005f0049006d00610067006501000001ed000000b60000001600fffffffb000000180052006f0062006f00740033005f0049006d00610067006501000002a9000000b60000001600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000780000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000003efc0100000002fb0000000800540069006d0065010000000000000780000002eb00fffffffb0000000800540069006d006501000000000000045000000000000000000000050f0000032200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Robot1_Image:
+    collapsed: false
+  Robot2_Image:
+    collapsed: false
+  Robot3_Image:
+    collapsed: false
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 27

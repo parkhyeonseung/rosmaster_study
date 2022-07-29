@@ -1,0 +1,12 @@
+<launch>
+    <arg name="VideoSwitch" default="true"/>
+    <!-- 手柄控制节点 Handle control node-->
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <include file="$(find astra_camera)/launch/astra.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/yahboomcar.launch"/>
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" unless="$(arg VideoSwitch)"/>
+    <node pkg="yahboomcar_astra" type="colorTracker.py" name="colorTracker" required="true" output="screen"/>
+    <node pkg="yahboomcar_astra" type="colorHSV.py" name="colorHSV" required="true" output="screen" if="$(arg VideoSwitch)">
+        <param name="VideoSwitch" type="bool" value="$(arg VideoSwitch)"/>
+    </node>
+</launch>

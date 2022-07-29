@@ -1,0 +1,17 @@
+\subsubsection usage Usage
+\verbatim
+<node name="RoundListener" pkg="yahboomcar_multi" type="RoundListener">
+  <param name="lin_Kp" type="double" value="1.0" />
+  <param name="lin_Ki" type="double" value="0.0" />
+  <param name="lin_Kd" type="double" value="1.0" />
+  <param name="ang_Kp" type="double" value="0.8" />
+  <param name="ang_Ki" type="double" value="0.0" />
+  <param name="ang_Kd" type="double" value="1.0" />
+  <param name="teams" type="int" value="1" />
+  <param name="robot_model" type="int" value="0" />
+  <param name="navigate" type="bool" value="False" />
+  <param name="switch" type="bool" value="True" />
+  <param name="dist" type="double" value="0.7" />
+</node>
+\endverbatim
+

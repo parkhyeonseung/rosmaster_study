@@ -1,0 +1,14 @@
+<launch>
+    <arg name="bUseViewer" default="false"/>
+    <arg name="robot_type" value="$(env ROBOT_TYPE)" doc="robot_type [X1,X3,X3plus,R2,X7]"/>
+    <include file="$(find astra_camera)/launch/astrapro.launch"/>
+    <include file="$(find yahboomcar_bringup)/launch/bringup.launch"/>
+    <node pkg="tf" type="static_transform_publisher" name="camera"
+          args="0 0 0 1.57 3.14 1.57 /camera_link /camera 30" if="$(eval arg('robot_type') == 'X3')"/>
+    <node pkg="ORB_SLAM2" type="RGBD_pose" name="ORB_SLAM2" output="screen"
+          args="$(find yahboomcar_slam)/param/ORBvoc.txt $(find yahboomcar_slam)/param/astra1.0.yaml">
+        <remap from="/camera/depth_registered/image_raw" to="/camera/depth_registered/image_raw"/>
+        <remap from="/camera/rgb/image_raw" to="/camera/rgb/image_raw"/>
+        <param name="bUseViewer" type="bool" value="$(arg bUseViewer)"/>
+    </node>
+</launch>

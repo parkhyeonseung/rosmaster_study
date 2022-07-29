@@ -1,0 +1,10 @@
+<launch>
+    <arg name="bUseViewer" default="true"/>
+    <include file="$(find astra_camera)/launch/astrapro.launch"/>
+    <node pkg="ORB_SLAM2" type="RGBD_pose" name="ORB_SLAM2" output="screen"
+          args="$(find yahboomcar_slam)/param/ORBvoc.txt $(find yahboomcar_slam)/param/astra1.0.yaml">
+        <remap from="/camera/depth_registered/image_raw" to="/camera/depth_registered/image_raw"/>
+        <remap from="/camera/rgb/image_raw" to="/camera/rgb/image_raw"/>
+        <param name="bUseViewer" type="bool" value="$(arg bUseViewer)"/>
+    </node>
+</launch>

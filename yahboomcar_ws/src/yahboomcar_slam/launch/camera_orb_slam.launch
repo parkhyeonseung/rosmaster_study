@@ -1,0 +1,21 @@
+<launch>
+    <arg name="orb_slam_type" default="mono" doc="orb_slam_type [mono,monoAR,rgbd]"/>
+    <include file="$(find astra_camera)/launch/astrapro.launch" if="$(eval arg('orb_slam_type') == 'rgbd')"/>
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" unless="$(eval arg('orb_slam_type') == 'rgbd')"/>
+    <node pkg="ORB_SLAM2" type="MonoAR" name="ORB_SLAM2" output="screen"
+          args="$(find yahboomcar_slam)/param/ORBvoc.txt $(find yahboomcar_slam)/param/astra1.0.yaml" 
+           if="$(eval arg('orb_slam_type') == 'monoAR')" >
+        <remap from="/camera/image_raw" to="/usb_cam/image_raw"/>
+    </node>
+    <node pkg="ORB_SLAM2" type="Mono" name="ORB_SLAM2" output="screen"
+          args="$(find yahboomcar_slam)/param/ORBvoc.txt $(find yahboomcar_slam)/param/astra.yaml" 
+           if="$(eval arg('orb_slam_type') == 'mono')" >
+        <remap from="/camera/image_raw" to="/usb_cam/image_raw"/>
+    </node>
+    <node pkg="ORB_SLAM2" type="RGBD" name="ORB_SLAM2" output="screen"
+          args="$(find yahboomcar_slam)/param/ORBvoc.txt $(find yahboomcar_slam)/param/astra1.0.yaml"
+          if="$(eval arg('orb_slam_type') == 'rgbd')" >
+        <remap from="/camera/depth_registered/image_raw" to="/camera/depth_registered/image_raw"/>
+        <remap from="/camera/rgb/image_raw" to="/camera/rgb/image_raw"/>
+    </node>
+</launch>

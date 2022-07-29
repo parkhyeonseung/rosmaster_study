@@ -1,0 +1,16 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~lin_Kp" : \b [double] Kp in PID min: 0.0, default: 1.0, max: 10.0
+- \b "~lin_Ki" : \b [double] Ki in PID min: 0.0, default: 0.0, max: 10.0
+- \b "~lin_Kd" : \b [double] Kd in PID min: 0.0, default: 1.0, max: 10.0
+- \b "~ang_Kp" : \b [double] Kp in PID min: 0.0, default: 0.8, max: 10.0
+- \b "~ang_Ki" : \b [double] Ki in PID min: 0.0, default: 0.0, max: 10.0
+- \b "~ang_Kd" : \b [double] Kd in PID min: 0.0, default: 1.0, max: 10.0
+- \b "~teams" : \b [int] A size parameter which is edited via an enum min: 0, default: 1, max: 2
+- \b "~robot_model" : \b [int] A size parameter which is edited via an enum min: 0, default: 0, max: 1
+- \b "~navigate" : \b [bool] navigate in rosbot min: False, default: False, max: True
+- \b "~switch" : \b [bool] switch in rosbot min: False, default: True, max: True
+- \b "~dist" : \b [double] dist min: 0.5, default: 0.7, max: 2.0
+

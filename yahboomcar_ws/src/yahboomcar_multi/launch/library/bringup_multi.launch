@@ -1,0 +1,73 @@
+<launch>
+    <!-- PCB和PC之间通过USB串行通信 -->
+    <!---USB serial communication between PCB and PC -->
+    <arg name="ns" default="robot1"/>
+    <arg name="use_gui" default="false"/>
+    <arg name="use_rviz" default="false"/>
+    <arg name="robot_type" value="$(env ROBOT_TYPE)" doc="robot_type [X1,X3,X3plus,R2,X7]"/>
+    <group ns="$(arg ns)">
+        <!-- 仿真模型 -->
+        <!-- Simulation model -->
+        <param name="robot_description" command="$(find xacro)/xacro --inorder
+        '$(find yahboomcar_description)/urdf/yahboomcar_$(arg robot_type).urdf.xacro' ns:='$(arg ns)'"/>
+        <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"
+              if="$(arg use_gui)"/>
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
+              unless="$(arg use_gui)"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+        <!-- 底层驱动节点 -->
+        <!-- Low-level driver node -->
+        <node pkg="yahboomcar_bringup" type="Mcnamu_driver.py" name="driver_node" required="true" output="screen" if="$(eval arg('robot_type') == 'X3')">
+            <param name="xlinear_speed_limit" type="double" value="1.0"/>
+            <param name="ylinear_speed_limit" type="double" value="1.0"/>
+            <param name="angular_speed_limit" type="double" value="5.0"/>
+            <param name="imu_link" type="string" value="$(arg ns)/imu_link"/>
+            <param name="prefix" type="string" value="$(arg ns)"/>
+            <remap from="/pub_vel" to="/$(arg ns)/vel_raw"/>
+            <remap from="/pub_imu" to="/$(arg ns)/imu/imu_raw"/>
+            <remap from="/pub_mag" to="/$(arg ns)/mag/mag_raw"/>
+        </node>
+
+        <!-- 发布里程计数据 -->
+        <!-- Publish odometer data -->
+        <node pkg="yahboomcar_bringup" type="base_node" name="odometry_publisher">
+            <param name="~odom_frame" type="string" value="$(arg ns)/odom"/>
+            <param name="~base_footprint_frame" type="string" value="$(arg ns)/base_footprint"/>
+            <param name="linear_scale_x" type="double" value="1.1"/>
+            <param name="linear_scale_y" type="double" value="1.0"/>
+            <remap from="/sub_vel" to="/$(arg ns)/vel_raw"/>
+            <remap from="/pub_odom" to="/$(arg ns)/odom_raw"/>
+        </node>
+        <!-- 过滤和融合imu数据 -->
+        <!-- Filter and fuse imu data -->
+        <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen">
+            <param name="fixed_frame" value="/$(arg ns)/base_link"/>
+            <param name="use_mag" value="false"/>
+            <param name="publish_tf" value="false"/>
+            <param name="use_magnetic_field_msg" value="false"/>
+            <param name="world_frame" value="enu"/>
+            <param name="orientation_stddev" value="0.05"/>
+            <param name="angular_scale" value="1.0"/>
+            <remap from="/sub_imu" to="/$(arg ns)/imu/imu_raw"/>
+            <remap from="/sub_mag" to="/$(arg ns)/mag/mag_raw"/>
+            <remap from="/pub_imu" to="/$(arg ns)/imu/imu_data"/>
+            <remap from="/pub_mag" to="/$(arg ns)/mag/mag_field"/>
+        </node>
+        <!-- 扩展卡尔曼数据融合 -->
+        <!-- Extended Kalman data fusion -->
+        <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" output="screen">
+            <remap from="odometry/filtered" to="odom"/>
+            <remap from="/odom0" to="/$(arg ns)/odom_raw"/>
+            <remap from="/imu0" to="/$(arg ns)/imu/imu_data"/>
+            <param name="map_frame" value="/$(arg ns)/map"/>
+            <param name="odom_frame" value="/$(arg ns)/odom"/>
+            <param name="base_link_frame" value="/$(arg ns)/base_footprint"/>
+            <param name="world_frame" value="/$(arg ns)/odom"/>
+            <rosparam command="load" file="$(find yahboomcar_bringup)/param/robot_localization.yaml"/>
+        </node>
+        <!-- rviz -->
+        <node pkg="rviz" type="rviz" name="odom_rviz" required="true"
+              args="-d $(find yahboomcar_multi)/rviz/odom_multirobot.rviz" if="$(arg use_rviz)"/>
+    </group>
+</launch>

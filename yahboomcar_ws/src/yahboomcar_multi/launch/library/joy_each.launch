@@ -1,0 +1,9 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+    <arg name="ns" default="robot1"/>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen" respawn="false" ns="$(arg ns)"/>
+    <include file="$(find yahboomcar_multi)/launch/library/joy_base.launch">
+        <arg name="ns" default="$(arg ns)"/>
+        <arg name="joy" default="$(arg ns)/joy"/>
+    </include>
+</launch>

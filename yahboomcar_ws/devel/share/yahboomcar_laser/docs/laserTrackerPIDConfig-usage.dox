@@ -1,0 +1,16 @@
+\subsubsection usage Usage
+\verbatim
+<node name="laser_Tracker" pkg="yahboomcar_laser" type="laser_Tracker">
+  <param name="lin_Kp" type="double" value="2.0" />
+  <param name="lin_Ki" type="double" value="0.0" />
+  <param name="lin_Kd" type="double" value="2.0" />
+  <param name="ang_Kp" type="double" value="3.0" />
+  <param name="ang_Ki" type="double" value="0.0" />
+  <param name="ang_Kd" type="double" value="5.0" />
+  <param name="laserAngle" type="int" value="65" />
+  <param name="ResponseDist" type="double" value="1.0" />
+  <param name="priorityAngle" type="int" value="30" />
+  <param name="switch" type="bool" value="False" />
+</node>
+\endverbatim
+

@@ -1,0 +1,8 @@
+<launch>
+    <!--arg name="robot_type" value="$(env ROBOT_TYPE)" doc="robot_type [X1,X3,X3plus,R2,X7]"/-->
+    <!-- 底层驱动节点 -->
+    <!-- Low-level driver node -->
+    <node pkg="yahboomcar_voice_ctrl" type="voice_Ctrl_Mcnamu_driver.py" name="voice_ctrl_driver_node" required="true" output="screen"/>
+    <include file="$(find yahboomcar_ctrl)/launch/yahboom_joy.launch"/>
+    <!--include file="$(find rplidar_ros)/launch/rplidar.launch"/-->
+</launch>
