@@ -1,8 +1,8 @@
 from ardu_serial import Ardu
 ## v hover_yolo_joy_mode4_8_31
 class hover_app():
-    def __init__(self):
-        self.hover = Ardu()
+    def __init__(self,port='/dev/ttyMEGA'):
+        self.hover = Ardu(port=port)
 
     
     def get_xy(self,x,y):  ## cmd =10
@@ -15,8 +15,6 @@ class hover_app():
 
         x_hover_data = 'g'+str(x_data)
         y_hover_data = 't'+str(y_data)
-        print(x_hover_data)
-        print(y_hover_data)
         self.hover.input(x_hover_data)
         self.hover.input(y_hover_data)
         

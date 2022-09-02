@@ -5,7 +5,7 @@ import serial
 import os,sys
 
 class Ardu():
-    def __init__(self,port = "/dev/ttyACM0",baudrate = 115200):
+    def __init__(self,port = "/dev/ttyMEGA",baudrate = 115200):
         self.port = port
         self.stop = '00q'
         self.data = '00q'

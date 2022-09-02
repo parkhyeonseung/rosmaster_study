@@ -11,7 +11,7 @@ import sys
 import struct
 import inspect
 import ctypes
-
+import argparse
 from Rosmaster_Lib import Rosmaster
 
 from camera_rosmaster import Rosmaster_Camera
@@ -21,21 +21,36 @@ from wifi_rosmaster import Rosmaster_WIFI
 from gevent import pywsgi
 from control_hover_app import hover_app
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--mode', type=str, default='hover', help='debug or hover default hover')
+parser.add_argument('--hover_port', type=str, default='/dev/ttyMEGA', help='port')
+parser.add_argument('--imu_port', type=str, default='/dev/ttyIMU', help='port')
+opt = parser.parse_args()
 
 g_debug = False
 hover_b = False
 if len(sys.argv) > 1:
-    if str(sys.argv[1]) == "debug":
+    if opt.mode == "debug":
+        print("mode debug")
         g_debug = True
-    elif str(sys.argv[1]) == 'hover':
-        hover = hover_app()
+    elif opt.mode == 'hover':
+        print("mode hover")
+        try : 
+            su_port = "sudo chmod +777 "
+            os.system(su_port+opt.hover_port)
+            hover = hover_app(port = opt.hover_port)
+        except : 
+            print('port error ')
+            port = input('port : ')
+            os.system(su_port+port)
+            hover = hover_app(port = port)
         hover_b = True
         
 print("debug=", g_debug)
 
 
 # 小车底层处理库
-g_bot = Rosmaster(debug=g_debug)
+g_bot = Rosmaster(com=opt.imu_port,debug=g_debug)
 # 启动线程接收串口数据
 g_bot.create_receive_threading()
 # 小车类型
@@ -300,9 +315,7 @@ def parse_data(sk_client, data):
         else:    
             if g_car_type == g_bot.CARTYPE_R2:
                 speed_y = my_map(speed_y, -1, 1, AKM_LIMIT_ANGLE/1000.0, AKM_LIMIT_ANGLE/-1000.0)
-                # speed_z = my_map(speed_y, -1, 1, 3.0, -3.0)
                 g_bot.set_car_motion(speed_x*1.8, speed_y, 0)
-                # print('r2 : ',speed_x,speed_y)
             else:
                 g_bot.set_car_motion(speed_x, speed_y, 0)
                 # print('none : ',speed_x,speed_y)
